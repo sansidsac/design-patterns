@@ -1,20 +1,23 @@
 import React from 'react'
 import SplitScreen from './components/SplitScreen'
 
-const LeftSideComp=()=>{
+const LeftSideComp=({title})=>{
   return (
-  <h1>Left Side</h1>
+  <h1 style={{backgroundColor:'red'}}>{title}</h1>
   )
 }
-const RightSideComp=()=>{
+const RightSideComp=({title})=>{
   return (
-  <h1>Right Side</h1>
+  <h1 style={{backgroundColor:'blue'}}>{title}</h1>
   )
 }
 
 const App = () => {
   return (
-    <SplitScreen Left={LeftSideComp} Right={RightSideComp}/>
+    <SplitScreen leftWidth={1} rightWidth={3}>
+        <LeftSideComp title={'Left'}/>
+        <RightSideComp title={'Right'}/>
+    </SplitScreen>
   )
 }
 
