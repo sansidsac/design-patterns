@@ -4,6 +4,11 @@ import Regular from './components/lists/Regular'
 import {authors} from './data/authors'
 import SmallListItems from './components/authors/SmallListItems'
 import LargeListItems from './components/authors/LargeListItems'
+import { books } from './data/books'
+import { SmallBookListItem } from './components/books/SmallListItems'
+import { LargeBookListItem } from './components/books/LargeListItems'
+import { NumberedList } from './components/lists/Numbered'
+import { Modal } from './components/Modal'
 
 const LeftSideComp=({title})=>{
   return (
@@ -19,8 +24,9 @@ const RightSideComp=({title})=>{
 const App = () => {
   return (
   <>
-    <Regular items={authors} sourceName={"author"} ItemComponent={SmallListItems}/>
-    <Regular items={authors} sourceName={"author"} ItemComponent={LargeListItems}/>
+    <Modal>
+      <LargeBookListItem book={books[0]}/>
+    </Modal>
   </>
   )
 }
