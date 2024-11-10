@@ -9,6 +9,7 @@ import { SmallBookListItem } from './components/books/SmallListItems'
 import { LargeBookListItem } from './components/books/LargeListItems'
 import { NumberedList } from './components/lists/Numbered'
 import { Modal } from './components/Modal'
+import {GlobalStyle} from './utils/index'
 
 const LeftSideComp=({title})=>{
   return (
@@ -24,9 +25,8 @@ const RightSideComp=({title})=>{
 const App = () => {
   return (
   <>
-    <Modal>
-      <LargeBookListItem book={books[0]}/>
-    </Modal>
+    <h1>Hello</h1>
+    <GlobalStyle/>
   </>
   )
 }
