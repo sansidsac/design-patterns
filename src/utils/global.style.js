@@ -1,5 +1,6 @@
 import { normalize } from "polished";
 import { createGlobalStyle } from "styled-components";
+import { color } from "./color.util";
 
 export const GlobalStyle = createGlobalStyle`
     ${normalize()}
@@ -14,6 +15,6 @@ export const GlobalStyle = createGlobalStyle`
 
     body{
         margin: 10px;
-        background-color: #16425B;
+        background-color: ${color[300]};
     }
 `;

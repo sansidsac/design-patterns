@@ -10,6 +10,7 @@ import { LargeBookListItem } from './components/books/LargeListItems'
 import { NumberedList } from './components/lists/Numbered'
 import { Modal } from './components/Modal'
 import {GlobalStyle} from './utils/index'
+import { Button, PrimaryButton } from './components/Button'
 
 const LeftSideComp=({title})=>{
   return (
@@ -25,7 +26,7 @@ const RightSideComp=({title})=>{
 const App = () => {
   return (
   <>
-    <h1>Hello</h1>
+    <Button className=''>Click Me</Button>
     <GlobalStyle/>
   </>
   )
